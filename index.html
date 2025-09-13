@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My first WebPAGE</title>
     <style>
+        *{
+            margin: 0;
+            padding: 5;
+            box-sizing: border-box;
+        }
         .tal{
             border : 1px black solid;
             margin : 0;
@@ -14,11 +19,21 @@
     </style>
 </head>
 <body>
+    <table>
+        
+        <tr>
+            <td style="background-color: rgb(234, 229, 229); border-right:1px black solid; vertical-align: top;" width="20%" height="100%">
+                <h1>MAIN MENU</h1>
+                <a href="index.html">Home</a><br><br>
+                <a href="site.html">Site</a><br><br>
+            </td>
+            <td>
+                <br>
                 <h1>Sekezhanov Diyar</h1>
-            <h2>SE-2415</h2>
-            <h3>About me</h3>
-            <p>Game developer, guru of games and mddings. like to eat sweets</p>
-            <ol>
+                <h2>SE-2415</h2>
+                <h3>About me</h3>
+                <p>Game developer, guru of games and mddings. like to eat sweets</p>
+                <ol>
                     <li>game dev</li>
                     <li>baking</li>
                     <li>running</li>
@@ -41,12 +56,41 @@
                         <td>Monday</td>
                         <td>Math</td>
                         <td>9:00-10:30</td>
-                    </tr>
-                    <tr class ="days">
-                        <td>Tuesday</td>
-                        <td>Physics</td>
-                        <td>10:45-12:15</td>
-                    </tr>
                 </table>
+
+                <H1 style="text-align: center;"> Today's mood</H1>
+                <p> i love coffee    &#129392;&#9749;  </p>
+                <p> also love chocolate in coffee &#127851;</p>
+                <hr>
+
+                <input type="text" placeholder="your name">
+                <input type="email" placeholder="your email">
+                <input type="color">
+                <button>Submit</button>
+
+
+            </td>
+        </tr>
+    </table>
 </body>
+
+<script >
+    var day = 1;
+    document.querySelector(".clek").onclick = function(){
+        day++;
+        if (day>8){
+            day=1;
+        }
+        switch (day){
+            case 1: document.querySelector(".days").innerHTML = "<td>Monday</td><td>Math</td><td>9:00-10:30</td>"; break;
+            case 2: document.querySelector(".days").innerHTML = "<td>Tuesday</td><td>Physics</td><td>10:45-12:15</td>"; break;
+            case 3: document.querySelector(".days").innerHTML = "<td>Wednesday</td><td>English</td><td>12:30-14:00</td>"; break;
+            case 4: document.querySelector(".days").innerHTML = "<td>Thursday</td><td>History</td><td>14:15-15:45</td>"; break;
+            case 5: document.querySelector(".days").innerHTML = "<td>Friday</td><td>Chemistry</td><td>16:00-17:30</td>"; break;
+            case 6: document.querySelector(".days").innerHTML = "<td>Saturday</td><td>Biology</td><td>17:45-19:15</td>"; break;
+            case 7: document.querySelector(".days").innerHTML = "<td>Sunday</td><td>Art</td><td>19:30-21:00</td>"; break;
+        }
+
+    }
+    </script>
 </html>
